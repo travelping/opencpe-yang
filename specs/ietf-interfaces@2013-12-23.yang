@@ -45,11 +45,11 @@ module ietf-interfaces {
 
   // RFC Ed.: update the date below with the date of RFC publication
   // and remove this note.
-  revision 2013-07-04 {
+  revision 2013-12-23 {
     description
       "Initial revision.";
     reference
-      "Draft draft-ietf-netmod-interfaces-cfg-13";
+      "RFC XXXX: A YANG Data Model for Interface Management";
   }
 
   /*
@@ -129,7 +129,7 @@ module ietf-interfaces {
          (e.g., the interface hardware present does not match the
          interface type), then the configuration is not applied to
          the system-controlled interface shown in the
-         /interfaces-state/interface list.  If the the configuration
+         /interfaces-state/interface list.  If the configuration
          of a user-controlled interface cannot be used by the system,
          the configured interface is not instantiated in the
          /interfaces-state/interface list.";
@@ -164,15 +164,7 @@ module ietf-interfaces {
 
            When a configured user-controlled interface is created by
            the system, it is instantiated with the same name in the
-           /interface-state/interface list.  Since the name in that
-           list MAY be mapped to ifName by an implementation, such an
-           implementation MUST restrict the allowed values for this
-           leaf so that it matches the restrictions of ifName.
-
-           If a NETCONF server that implements this restriction is
-           sent a value that doesn't match the restriction, it MUST
-           reply with an rpc-error with the error-tag
-           'invalid-value'.";
+           /interface-state/interface list.";
       }
 
       leaf description {
@@ -180,15 +172,11 @@ module ietf-interfaces {
         description
           "A textual description of the interface.
 
-           This leaf MAY be mapped to ifAlias by an implementation.
-           Such an implementation MUST restrict the allowed values
-           for this leaf so that it matches the restrictions of
-           ifAlias.
-
-           If a NETCONF server that implements this restriction is
-           sent a value that doesn't match the restriction, it MUST
-           reply with an rpc-error with the error-tag
-           'invalid-value'.
+           A server implementation MAY map this leaf to the ifAlias
+           MIB object.  Such an implementation needs to use some
+           mechanism to handle the differences in size and characters
+           allowed between this leaf and ifAlias.  The definition of
+           such a mechanism is outside the scope of this document.
 
            Since ifAlias is defined to be stored in non-volatile
            storage, the MIB implementation MUST map ifAlias to the
@@ -277,6 +265,7 @@ module ietf-interfaces {
       }
     }
   }
+
   /*
    * Operational state data nodes
    */
@@ -288,7 +277,6 @@ module ietf-interfaces {
 
     list interface {
       key "name";
-
       description
         "The list of interfaces on the device.
 
@@ -301,7 +289,11 @@ module ietf-interfaces {
         description
           "The name of the interface.
 
-           This leaf MAY be mapped to ifName by an implementation.";
+           A server implementation MAY map this leaf to the ifName
+           MIB object.  Such an implementation needs to use some
+           mechanism to handle the differences in size and characters
+           allowed between this leaf and ifName.  The definition of
+           such a mechanism is outside the scope of this document.";
         reference
           "RFC 2863: The Interfaces Group MIB - ifName";
       }
@@ -613,6 +605,7 @@ module ietf-interfaces {
              requested be transmitted, and which were not addressed
              to a multicast or broadcast address at this sub-layer,
              including those that were discarded or not sent.
+
              Discontinuities in the value of this counter can occur
              at re-initialization of the management system, and at
              other times as indicated by the value of

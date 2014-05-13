@@ -8,17 +8,17 @@ module opencpe-deviations {
 
  import ietf-system {
   prefix "sys";
-  revision-date 2013-11-07;
+  revision-date 2014-04-04;
  }
 
  import ietf-interfaces {
   prefix "if";
-  revision-date 2013-07-04;
+  revision-date 2013-12-23;
  }
 
  import ietf-ip {
   prefix "ip";
-  revision-date 2013-10-18;
+  revision-date 2014-03-28;
  }
 
  organization
@@ -32,10 +32,15 @@ module opencpe-deviations {
  description
   "This module defines a home gateway for the TeraStream project.";
 
+ revision "2014-05-13" {
+   description
+     "Version 0.1.3
+     Adapt to new IETF-module revisions.";
+ }
  revision "2014-01-12" {
    description
      "Version 0.1.2
-     Fix wording of IPv6 neighbor state deviation";
+     Fix wording of IPv6 neighbor state deviation.";
  }
  revision "2013-12-19" {
    description

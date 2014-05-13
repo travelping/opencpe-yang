@@ -1,12 +1,12 @@
-pyang ietf-system@2013-11-07.yang ietf-interfaces@2013-07-04.yang\
-      ietf-ip@2013-10-18.yang opencpe-system@2014-01-27.yang\
-      opencpe-firmware-mgmt@2014-01-27.yang\
-      --features ietf-system:authentication,local-users,timezone-location,\
-crypt-hash-md5,crypt-hash-sha-256,crypt-hash-sha-512,ntp\
+pyang ietf-system@2014-04-04.yang ietf-interfaces@2013-12-23.yang\
+      ietf-ip@2014-03-28.yang opencpe-system@2014-01-27.yang\
+      opencpe-firmware-mgmt@2014-02-06.yang\
+      --features ietf-system:authentication,local-users,timezone-name,ntp\
+      --features iana-crypt-hash:crypt-hash-md5,crypt-hash-sha-256,crypt-hash-sha-512\
       --features opencpe-firmware-mgmt:firmware-slots,firmware-download-ftp,\
 firmware-download-http,firmware-download-https,firmware-download-scp\
       --features last-boot-status-report\
-      --deviation-module opencpe-deviations@2014-01-12.yang\
+      --deviation-module opencpe-deviations@2014-05-13.yang\
       -f tree
 
 module: ietf-system
@@ -16,8 +16,8 @@ module: ietf-system
    |  +--rw location?         string
    |  +--rw clock
    |  |  +--rw (timezone)?
-   |  |     +--:(timezone-location) {timezone-location}?
-   |  |     |  +--rw timezone-location?     ianatz:iana-timezone
+   |  |     +--:(timezone-name) {timezone-name}?
+   |  |     |  +--rw timezone-name?         timezone-name
    |  |     +--:(timezone-utc-offset)
    |  |        +--rw timezone-utc-offset?   int16
    |  +--rw ntp! {ntp}?
@@ -43,7 +43,7 @@ module: ietf-system
    |     +--rw user-authentication-order*   identityref
    |     +--rw user* [name] {local-users}?
    |        +--rw name        string
-   |        +--rw password?   crypt-hash
+   |        +--rw password?   ianach:crypt-hash
    |        +--rw ssh-key* [name]
    |           +--rw name         string
    |           +--rw algorithm    string
@@ -174,23 +174,10 @@ module: opencpe-firmware-mgmt
 rpcs:
    +---x firmware-download    
    |  +--ro input     
-   |  |  +--ro (transport)?
-   |  |  |  +--:(ftp) {firmware-download-ftp}?
-   |  |  |  |  +--ro ftp!
-   |  |  |  |     +--ro address    inet:uri
-   |  |  |  +--:(http) {firmware-download-http}?
-   |  |  |  |  +--ro http!
-   |  |  |  |     +--ro address    inet:uri
-   |  |  |  +--:(https) {firmware-download-https}?
-   |  |  |  |  +--ro https!
-   |  |  |  |     +--ro address    inet:uri
-   |  |  |  +--:(scp) {firmware-download-scp}?
-   |  |  |     +--ro scp!
-   |  |  |        +--ro address    inet:uri
+   |  |  +--ro address                     inet:uri
    |  |  +--ro (credentials)?
-   |  |  |  +--:(user-pass)
-   |  |  |  |  +--ro user-pass!
-   |  |  |  |     +--ro username    string
+   |  |  |  +--:(password)
+   |  |  |  |  +--ro password!
    |  |  |  |     +--ro password    string
    |  |  |  +--:(certificate)
    |  |  |  |  +--ro certificate!
@@ -208,16 +195,6 @@ rpcs:
    +---x firmware-commit      
    |  +--ro input     
    |     +--ro job-id    int32
-   +---x get-job-status       
-   |  +--ro input     
-   |  |  +--ro job-id    int32
-   |  +--ro output    
-   |     +--ro job-id            int32
-   |     +--ro install-target    leafref {firmware-slots}?
-   |     +--ro status
-   |        +--ro status        enumeration
-   |        +--ro status-msg?   string
-   |        +--ro progress      percent
    +---x set-bootorder         {firmware-slots}?
       +--ro input     
          +--ro bootorder*   leafref

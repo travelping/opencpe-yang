@@ -29,7 +29,7 @@ module iana-if-type {
      Requests for new values should be made to IANA via
      email (iana&iana.org).
 
-     Copyright (c) 2011 IETF Trust and the persons identified as
+     Copyright (c) 2013 IETF Trust and the persons identified as
      authors of the code.  All rights reserved.
 
      Redistribution and use in source and binary forms, with or
@@ -39,8 +39,8 @@ module iana-if-type {
      Relating to IETF Documents
      (http://trustee.ietf.org/license-info).
 
-     This version of this YANG module is part of RFC XXXX; see
-     the RFC itself for full legal notices.";
+     The initial version of this YANG module is part of RFC XXXX;
+     see the RFC itself for full legal notices.";
   // RFC Ed.: replace XXXX with actual RFC number and remove this
   // note.
     reference
@@ -49,7 +49,7 @@ module iana-if-type {
 
   // RFC Ed.: update the date below with the date of RFC publication
   // and remove this note.
-  revision 2013-11-07 {
+  revision 2014-01-15 {
     description
       "Initial revision.";
     reference
@@ -160,10 +160,14 @@ module iana-if-type {
   identity basicISDN {
     base iana-interface-type;
     description
-      "see also RFC2127";
+      "no longer used.
+       see also RFC2127";
   }
   identity primaryISDN {
     base iana-interface-type;
+    description
+      "no longer used.
+       see also RFC2127";
   }
   identity propPointToPointSerial {
     base iana-interface-type;
@@ -1508,4 +1512,3 @@ module iana-if-type {
   }
 
 }
-     

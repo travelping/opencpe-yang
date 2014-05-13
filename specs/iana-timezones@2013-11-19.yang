@@ -5,7 +5,6 @@ module iana-timezones {
   organization "IANA";
   contact
     "        Internet Assigned Numbers Authority
-
      Postal: ICANN
              4676 Admiralty Way, Suite 330
              Marina del Rey, CA 90292
@@ -36,12 +35,13 @@ module iana-timezones {
      This version of this YANG module is part of RFC XXXX; see
      the RFC itself for full legal notices.";
 
-  revision 2012-07-09 {
+  revision 2013-11-19 {
     description
-      "Initial revision. Using IANA Time Zone Data v. 2012c
-       (Released 2012-03-27)";
+      "Initial revision using IANA Time Zone Data v. 2013h
+       (Released 2013-10-25)";
     reference "RFC XXXX: TITLE";
   }
+
   typedef iana-timezone {
     description
       "A timezone location as defined by the IANA timezone
@@ -74,1242 +74,1244 @@ module iana-timezones {
       enum "Antarctica/McMurdo" {
         value 8;
         description
-          "McMurdo Station, Ross Island";
-      }
-      enum "Antarctica/South_Pole" {
-        value 9;
-        description
-          "Amundsen-Scott Station, South Pole";
+          "McMurdo, South Pole, Scott (New Zealand time)";
       }
       enum "Antarctica/Rothera" {
-        value 10;
+        value 9;
         description
           "Rothera Station, Adelaide Island";
       }
       enum "Antarctica/Palmer" {
-        value 11;
+        value 10;
         description
           "Palmer Station, Anvers Island";
       }
       enum "Antarctica/Mawson" {
-        value 12;
+        value 11;
         description
           "Mawson Station, Holme Bay";
       }
       enum "Antarctica/Davis" {
-        value 13;
+        value 12;
         description
           "Davis Station, Vestfold Hills";
       }
       enum "Antarctica/Casey" {
-        value 14;
+        value 13;
         description
           "Casey Station, Bailey Peninsula";
       }
       enum "Antarctica/Vostok" {
-        value 15;
+        value 14;
         description
           "Vostok Station, Lake Vostok";
       }
       enum "Antarctica/DumontDUrville" {
-        value 16;
+        value 15;
         description
           "Dumont-d'Urville Station, Terre Adelie";
       }
       enum "Antarctica/Syowa" {
-        value 17;
+        value 16;
         description
           "Syowa Station, E Ongul I";
       }
-      enum "Antarctica/Macquarie" {
-        value 18;
-        description
-          "Macquarie Island Station, Macquarie Island";
-      }
       enum "America/Argentina/Buenos_Aires" {
-        value 19;
+        value 17;
         description
           "Buenos Aires (BA, CF)";
       }
       enum "America/Argentina/Cordoba" {
-        value 20;
+        value 18;
         description
           "most locations (CB, CC, CN, ER, FM, MN, SE, SF)";
       }
       enum "America/Argentina/Salta" {
-        value 21;
+        value 19;
         description
           "(SA, LP, NQ, RN)";
       }
       enum "America/Argentina/Jujuy" {
-        value 22;
+        value 20;
         description
           "Jujuy (JY)";
       }
       enum "America/Argentina/Tucuman" {
-        value 23;
+        value 21;
         description
           "Tucuman (TM)";
       }
       enum "America/Argentina/Catamarca" {
-        value 24;
+        value 22;
         description
           "Catamarca (CT), Chubut (CH)";
       }
       enum "America/Argentina/La_Rioja" {
-        value 25;
+        value 23;
         description
           "La Rioja (LR)";
       }
       enum "America/Argentina/San_Juan" {
-        value 26;
+        value 24;
         description
           "San Juan (SJ)";
       }
       enum "America/Argentina/Mendoza" {
-        value 27;
+        value 25;
         description
           "Mendoza (MZ)";
       }
       enum "America/Argentina/San_Luis" {
-        value 28;
+        value 26;
         description
           "San Luis (SL)";
       }
       enum "America/Argentina/Rio_Gallegos" {
-        value 29;
+        value 27;
         description
           "Santa Cruz (SC)";
       }
       enum "America/Argentina/Ushuaia" {
-        value 30;
+        value 28;
         description
           "Tierra del Fuego (TF)";
       }
       enum "Pacific/Pago_Pago" {
-        value 31;
+        value 29;
       }
       enum "Europe/Vienna" {
-        value 32;
+        value 30;
       }
       enum "Australia/Lord_Howe" {
-        value 33;
+        value 31;
         description
           "Lord Howe Island";
       }
+      enum "Antarctica/Macquarie" {
+        value 32;
+        description
+          "Macquarie Island";
+      }
       enum "Australia/Hobart" {
-        value 34;
+        value 33;
         description
           "Tasmania - most locations";
       }
       enum "Australia/Currie" {
-        value 35;
+        value 34;
         description
           "Tasmania - King Island";
       }
       enum "Australia/Melbourne" {
-        value 36;
+        value 35;
         description
           "Victoria";
       }
       enum "Australia/Sydney" {
-        value 37;
+        value 36;
         description
           "New South Wales - most locations";
       }
       enum "Australia/Broken_Hill" {
-        value 38;
+        value 37;
         description
           "New South Wales - Yancowinna";
       }
       enum "Australia/Brisbane" {
-        value 39;
+        value 38;
         description
           "Queensland - most locations";
       }
       enum "Australia/Lindeman" {
-        value 40;
+        value 39;
         description
           "Queensland - Holiday Islands";
       }
       enum "Australia/Adelaide" {
-        value 41;
+        value 40;
         description
           "South Australia";
       }
       enum "Australia/Darwin" {
-        value 42;
+        value 41;
         description
           "Northern Territory";
       }
       enum "Australia/Perth" {
-        value 43;
+        value 42;
         description
           "Western Australia - most locations";
       }
       enum "Australia/Eucla" {
-        value 44;
+        value 43;
         description
           "Western Australia - Eucla area";
       }
       enum "America/Aruba" {
-        value 45;
+        value 44;
       }
       enum "Europe/Mariehamn" {
-        value 46;
+        value 45;
       }
       enum "Asia/Baku" {
-        value 47;
+        value 46;
       }
       enum "Europe/Sarajevo" {
-        value 48;
+        value 47;
       }
       enum "America/Barbados" {
-        value 49;
+        value 48;
       }
       enum "Asia/Dhaka" {
-        value 50;
+        value 49;
       }
       enum "Europe/Brussels" {
-        value 51;
+        value 50;
       }
       enum "Africa/Ouagadougou" {
-        value 52;
+        value 51;
       }
       enum "Europe/Sofia" {
-        value 53;
+        value 52;
       }
       enum "Asia/Bahrain" {
-        value 54;
+        value 53;
       }
       enum "Africa/Bujumbura" {
-        value 55;
+        value 54;
       }
       enum "Africa/Porto-Novo" {
-        value 56;
+        value 55;
       }
       enum "America/St_Barthelemy" {
-        value 57;
+        value 56;
       }
       enum "Atlantic/Bermuda" {
-        value 58;
+        value 57;
       }
       enum "Asia/Brunei" {
-        value 59;
+        value 58;
       }
       enum "America/La_Paz" {
-        value 60;
+        value 59;
       }
       enum "America/Kralendijk" {
-        value 61;
+        value 60;
       }
       enum "America/Noronha" {
-        value 62;
+        value 61;
         description
           "Atlantic islands";
       }
       enum "America/Belem" {
-        value 63;
+        value 62;
         description
           "Amapa, E Para";
       }
       enum "America/Fortaleza" {
-        value 64;
+        value 63;
         description
           "NE Brazil (MA, PI, CE, RN, PB)";
       }
       enum "America/Recife" {
-        value 65;
+        value 64;
         description
           "Pernambuco";
       }
       enum "America/Araguaina" {
-        value 66;
+        value 65;
         description
           "Tocantins";
       }
       enum "America/Maceio" {
-        value 67;
+        value 66;
         description
           "Alagoas, Sergipe";
       }
       enum "America/Bahia" {
-        value 68;
+        value 67;
         description
           "Bahia";
       }
       enum "America/Sao_Paulo" {
-        value 69;
+        value 68;
         description
           "S & SE Brazil (GO, DF, MG, ES, RJ, SP, PR, SC, RS)";
       }
       enum "America/Campo_Grande" {
-        value 70;
+        value 69;
         description
           "Mato Grosso do Sul";
       }
       enum "America/Cuiaba" {
-        value 71;
+        value 70;
         description
           "Mato Grosso";
       }
       enum "America/Santarem" {
-        value 72;
+        value 71;
         description
           "W Para";
       }
       enum "America/Porto_Velho" {
-        value 73;
+        value 72;
         description
           "Rondonia";
       }
       enum "America/Boa_Vista" {
-        value 74;
+        value 73;
         description
           "Roraima";
       }
       enum "America/Manaus" {
-        value 75;
+        value 74;
         description
           "E Amazonas";
       }
       enum "America/Eirunepe" {
-        value 76;
+        value 75;
         description
           "W Amazonas";
       }
       enum "America/Rio_Branco" {
-        value 77;
+        value 76;
         description
           "Acre";
       }
       enum "America/Nassau" {
-        value 78;
+        value 77;
       }
       enum "Asia/Thimphu" {
-        value 79;
+        value 78;
       }
       enum "Africa/Gaborone" {
-        value 80;
+        value 79;
       }
       enum "Europe/Minsk" {
-        value 81;
+        value 80;
       }
       enum "America/Belize" {
-        value 82;
+        value 81;
       }
       enum "America/St_Johns" {
-        value 83;
+        value 82;
         description
           "Newfoundland Time, including SE Labrador";
       }
       enum "America/Halifax" {
-        value 84;
+        value 83;
         description
           "Atlantic Time - Nova Scotia (most places), PEI";
       }
       enum "America/Glace_Bay" {
-        value 85;
+        value 84;
         description
-          "Atlantic Time - Nova Scotia - places that did not observe
-           DST 1966-1971";
+          "Atlantic Time - Nova Scotia - places that did not observe DST
+           1966-1971";
       }
       enum "America/Moncton" {
-        value 86;
+        value 85;
         description
           "Atlantic Time - New Brunswick";
       }
       enum "America/Goose_Bay" {
-        value 87;
+        value 86;
         description
           "Atlantic Time - Labrador - most locations";
       }
       enum "America/Blanc-Sablon" {
-        value 88;
+        value 87;
         description
           "Atlantic Standard Time - Quebec - Lower North Shore";
       }
-      enum "America/Montreal" {
-        value 89;
-        description
-          "Eastern Time - Quebec - most locations";
-      }
       enum "America/Toronto" {
-        value 90;
+        value 88;
         description
-          "Eastern Time - Ontario - most locations";
+          "Eastern Time - Ontario & Quebec - most locations";
       }
       enum "America/Nipigon" {
-        value 91;
+        value 89;
         description
-          "Eastern Time - Ontario & Quebec - places that did not
-           observe DST 1967-1973";
+          "Eastern Time - Ontario & Quebec - places that did not observe
+           DST 1967-1973";
       }
       enum "America/Thunder_Bay" {
-        value 92;
+        value 90;
         description
           "Eastern Time - Thunder Bay, Ontario";
       }
       enum "America/Iqaluit" {
-        value 93;
+        value 91;
         description
           "Eastern Time - east Nunavut - most locations";
       }
       enum "America/Pangnirtung" {
-        value 94;
+        value 92;
         description
           "Eastern Time - Pangnirtung, Nunavut";
       }
       enum "America/Resolute" {
-        value 95;
+        value 93;
         description
           "Central Standard Time - Resolute, Nunavut";
       }
       enum "America/Atikokan" {
-        value 96;
+        value 94;
         description
           "Eastern Standard Time - Atikokan, Ontario and Southampton I,
            Nunavut";
       }
       enum "America/Rankin_Inlet" {
-        value 97;
+        value 95;
         description
           "Central Time - central Nunavut";
       }
       enum "America/Winnipeg" {
-        value 98;
+        value 96;
         description
           "Central Time - Manitoba & west Ontario";
       }
       enum "America/Rainy_River" {
-        value 99;
+        value 97;
         description
           "Central Time - Rainy River & Fort Frances, Ontario";
       }
       enum "America/Regina" {
-        value 100;
+        value 98;
         description
           "Central Standard Time - Saskatchewan - most locations";
       }
       enum "America/Swift_Current" {
-        value 101;
+        value 99;
         description
           "Central Standard Time - Saskatchewan - midwest";
       }
       enum "America/Edmonton" {
-        value 102;
+        value 100;
         description
           "Mountain Time - Alberta, east British Columbia & west
            Saskatchewan";
       }
       enum "America/Cambridge_Bay" {
-        value 103;
+        value 101;
         description
           "Mountain Time - west Nunavut";
       }
       enum "America/Yellowknife" {
-        value 104;
+        value 102;
         description
           "Mountain Time - central Northwest Territories";
       }
       enum "America/Inuvik" {
-        value 105;
+        value 103;
         description
           "Mountain Time - west Northwest Territories";
       }
       enum "America/Creston" {
-        value 106;
+        value 104;
         description
           "Mountain Standard Time - Creston, British Columbia";
       }
       enum "America/Dawson_Creek" {
-        value 107;
+        value 105;
         description
           "Mountain Standard Time - Dawson Creek & Fort Saint John,
            British Columbia";
       }
       enum "America/Vancouver" {
-        value 108;
+        value 106;
         description
           "Pacific Time - west British Columbia";
       }
       enum "America/Whitehorse" {
-        value 109;
+        value 107;
         description
           "Pacific Time - south Yukon";
       }
       enum "America/Dawson" {
-        value 110;
+        value 108;
         description
           "Pacific Time - north Yukon";
       }
       enum "Indian/Cocos" {
-        value 111;
+        value 109;
       }
       enum "Africa/Kinshasa" {
-        value 112;
+        value 110;
         description
           "west Dem. Rep. of Congo";
       }
       enum "Africa/Lubumbashi" {
-        value 113;
+        value 111;
         description
           "east Dem. Rep. of Congo";
       }
       enum "Africa/Bangui" {
-        value 114;
+        value 112;
       }
       enum "Africa/Brazzaville" {
-        value 115;
+        value 113;
       }
       enum "Europe/Zurich" {
-        value 116;
+        value 114;
       }
       enum "Africa/Abidjan" {
-        value 117;
+        value 115;
       }
       enum "Pacific/Rarotonga" {
-        value 118;
+        value 116;
       }
       enum "America/Santiago" {
-        value 119;
+        value 117;
         description
           "most locations";
       }
       enum "Pacific/Easter" {
-        value 120;
+        value 118;
         description
           "Easter Island & Sala y Gomez";
       }
       enum "Africa/Douala" {
-        value 121;
+        value 119;
       }
       enum "Asia/Shanghai" {
-        value 122;
+        value 120;
         description
           "east China - Beijing, Guangdong, Shanghai, etc.";
       }
       enum "Asia/Harbin" {
-        value 123;
+        value 121;
         description
           "Heilongjiang (except Mohe), Jilin";
       }
       enum "Asia/Chongqing" {
-        value 124;
+        value 122;
         description
           "central China - Sichuan, Yunnan, Guangxi, Shaanxi, Guizhou,
            etc.";
       }
       enum "Asia/Urumqi" {
-        value 125;
+        value 123;
         description
           "most of Tibet & Xinjiang";
       }
       enum "Asia/Kashgar" {
-        value 126;
+        value 124;
         description
           "west Tibet & Xinjiang";
       }
       enum "America/Bogota" {
-        value 127;
+        value 125;
       }
       enum "America/Costa_Rica" {
-        value 128;
+        value 126;
       }
       enum "America/Havana" {
-        value 129;
+        value 127;
       }
       enum "Atlantic/Cape_Verde" {
-        value 130;
+        value 128;
       }
       enum "America/Curacao" {
-        value 131;
+        value 129;
       }
       enum "Indian/Christmas" {
-        value 132;
+        value 130;
       }
       enum "Asia/Nicosia" {
-        value 133;
+        value 131;
       }
       enum "Europe/Prague" {
-        value 134;
+        value 132;
       }
       enum "Europe/Berlin" {
-        value 135;
+        value 133;
+        description
+          "most locations";
+      }
+      enum "Europe/Busingen" {
+        value 134;
+        description
+          "Busingen";
       }
       enum "Africa/Djibouti" {
-        value 136;
+        value 135;
       }
       enum "Europe/Copenhagen" {
-        value 137;
+        value 136;
       }
       enum "America/Dominica" {
-        value 138;
+        value 137;
       }
       enum "America/Santo_Domingo" {
-        value 139;
+        value 138;
       }
       enum "Africa/Algiers" {
-        value 140;
+        value 139;
       }
       enum "America/Guayaquil" {
-        value 141;
+        value 140;
         description
           "mainland";
       }
       enum "Pacific/Galapagos" {
-        value 142;
+        value 141;
         description
           "Galapagos Islands";
       }
       enum "Europe/Tallinn" {
-        value 143;
+        value 142;
       }
       enum "Africa/Cairo" {
-        value 144;
+        value 143;
       }
       enum "Africa/El_Aaiun" {
-        value 145;
+        value 144;
       }
       enum "Africa/Asmara" {
-        value 146;
+        value 145;
       }
       enum "Europe/Madrid" {
-        value 147;
+        value 146;
         description
           "mainland";
       }
       enum "Africa/Ceuta" {
-        value 148;
+        value 147;
         description
           "Ceuta & Melilla";
       }
       enum "Atlantic/Canary" {
-        value 149;
+        value 148;
         description
           "Canary Islands";
       }
       enum "Africa/Addis_Ababa" {
-        value 150;
+        value 149;
       }
       enum "Europe/Helsinki" {
-        value 151;
+        value 150;
       }
       enum "Pacific/Fiji" {
-        value 152;
+        value 151;
       }
       enum "Atlantic/Stanley" {
-        value 153;
+        value 152;
       }
       enum "Pacific/Chuuk" {
-        value 154;
+        value 153;
         description
           "Chuuk (Truk) and Yap";
       }
       enum "Pacific/Pohnpei" {
-        value 155;
+        value 154;
         description
           "Pohnpei (Ponape)";
       }
       enum "Pacific/Kosrae" {
-        value 156;
+        value 155;
         description
           "Kosrae";
       }
       enum "Atlantic/Faroe" {
-        value 157;
+        value 156;
       }
       enum "Europe/Paris" {
-        value 158;
+        value 157;
       }
       enum "Africa/Libreville" {
-        value 159;
+        value 158;
       }
       enum "Europe/London" {
-        value 160;
+        value 159;
       }
       enum "America/Grenada" {
-        value 161;
+        value 160;
       }
       enum "Asia/Tbilisi" {
-        value 162;
+        value 161;
       }
       enum "America/Cayenne" {
-        value 163;
+        value 162;
       }
       enum "Europe/Guernsey" {
-        value 164;
+        value 163;
       }
       enum "Africa/Accra" {
-        value 165;
+        value 164;
       }
       enum "Europe/Gibraltar" {
-        value 166;
+        value 165;
       }
       enum "America/Godthab" {
-        value 167;
+        value 166;
         description
           "most locations";
       }
       enum "America/Danmarkshavn" {
-        value 168;
+        value 167;
         description
           "east coast, north of Scoresbysund";
       }
       enum "America/Scoresbysund" {
-        value 169;
+        value 168;
         description
           "Scoresbysund / Ittoqqortoormiit";
       }
       enum "America/Thule" {
-        value 170;
+        value 169;
         description
           "Thule / Pituffik";
       }
       enum "Africa/Banjul" {
-        value 171;
+        value 170;
       }
       enum "Africa/Conakry" {
-        value 172;
+        value 171;
       }
       enum "America/Guadeloupe" {
-        value 173;
+        value 172;
       }
       enum "Africa/Malabo" {
-        value 174;
+        value 173;
       }
       enum "Europe/Athens" {
-        value 175;
+        value 174;
       }
       enum "Atlantic/South_Georgia" {
-        value 176;
+        value 175;
       }
       enum "America/Guatemala" {
-        value 177;
+        value 176;
       }
       enum "Pacific/Guam" {
-        value 178;
+        value 177;
       }
       enum "Africa/Bissau" {
-        value 179;
+        value 178;
       }
       enum "America/Guyana" {
-        value 180;
+        value 179;
       }
       enum "Asia/Hong_Kong" {
-        value 181;
+        value 180;
       }
       enum "America/Tegucigalpa" {
-        value 182;
+        value 181;
       }
       enum "Europe/Zagreb" {
-        value 183;
+        value 182;
       }
       enum "America/Port-au-Prince" {
-        value 184;
+        value 183;
       }
       enum "Europe/Budapest" {
-        value 185;
+        value 184;
       }
       enum "Asia/Jakarta" {
-        value 186;
+        value 185;
         description
           "Java & Sumatra";
       }
       enum "Asia/Pontianak" {
-        value 187;
+        value 186;
         description
           "west & central Borneo";
       }
       enum "Asia/Makassar" {
-        value 188;
+        value 187;
         description
-          "east & south Borneo, Sulawesi (Celebes), Bali, Nusa
-           Tengarra, west Timor";
+          "east & south Borneo, Sulawesi (Celebes), Bali, Nusa Tengarra,
+           west Timor";
       }
       enum "Asia/Jayapura" {
-        value 189;
+        value 188;
         description
           "west New Guinea (Irian Jaya) & Malukus (Moluccas)";
       }
       enum "Europe/Dublin" {
-        value 190;
+        value 189;
       }
       enum "Asia/Jerusalem" {
-        value 191;
+        value 190;
       }
       enum "Europe/Isle_of_Man" {
-        value 192;
+        value 191;
       }
       enum "Asia/Kolkata" {
-        value 193;
+        value 192;
       }
       enum "Indian/Chagos" {
-        value 194;
+        value 193;
       }
       enum "Asia/Baghdad" {
-        value 195;
+        value 194;
       }
       enum "Asia/Tehran" {
-        value 196;
+        value 195;
       }
       enum "Atlantic/Reykjavik" {
-        value 197;
+        value 196;
       }
       enum "Europe/Rome" {
-        value 198;
+        value 197;
       }
       enum "Europe/Jersey" {
-        value 199;
+        value 198;
       }
       enum "America/Jamaica" {
-        value 200;
+        value 199;
       }
       enum "Asia/Amman" {
-        value 201;
+        value 200;
       }
       enum "Asia/Tokyo" {
-        value 202;
+        value 201;
       }
       enum "Africa/Nairobi" {
-        value 203;
+        value 202;
       }
       enum "Asia/Bishkek" {
-        value 204;
+        value 203;
       }
       enum "Asia/Phnom_Penh" {
-        value 205;
+        value 204;
       }
       enum "Pacific/Tarawa" {
-        value 206;
+        value 205;
         description
           "Gilbert Islands";
       }
       enum "Pacific/Enderbury" {
-        value 207;
+        value 206;
         description
           "Phoenix Islands";
       }
       enum "Pacific/Kiritimati" {
-        value 208;
+        value 207;
         description
           "Line Islands";
       }
       enum "Indian/Comoro" {
-        value 209;
+        value 208;
       }
       enum "America/St_Kitts" {
-        value 210;
+        value 209;
       }
       enum "Asia/Pyongyang" {
-        value 211;
+        value 210;
       }
       enum "Asia/Seoul" {
-        value 212;
+        value 211;
       }
       enum "Asia/Kuwait" {
-        value 213;
+        value 212;
       }
       enum "America/Cayman" {
-        value 214;
+        value 213;
       }
       enum "Asia/Almaty" {
-        value 215;
+        value 214;
         description
           "most locations";
       }
       enum "Asia/Qyzylorda" {
-        value 216;
+        value 215;
         description
           "Qyzylorda (Kyzylorda, Kzyl-Orda)";
       }
       enum "Asia/Aqtobe" {
-        value 217;
+        value 216;
         description
           "Aqtobe (Aktobe)";
       }
       enum "Asia/Aqtau" {
-        value 218;
+        value 217;
         description
           "Atyrau (Atirau, Gur'yev), Mangghystau (Mankistau)";
       }
       enum "Asia/Oral" {
-        value 219;
+        value 218;
         description
           "West Kazakhstan";
       }
       enum "Asia/Vientiane" {
-        value 220;
+        value 219;
       }
       enum "Asia/Beirut" {
-        value 221;
+        value 220;
       }
       enum "America/St_Lucia" {
-        value 222;
+        value 221;
       }
       enum "Europe/Vaduz" {
-        value 223;
+        value 222;
       }
       enum "Asia/Colombo" {
-        value 224;
+        value 223;
       }
       enum "Africa/Monrovia" {
-        value 225;
+        value 224;
       }
       enum "Africa/Maseru" {
-        value 226;
+        value 225;
       }
       enum "Europe/Vilnius" {
-        value 227;
+        value 226;
       }
       enum "Europe/Luxembourg" {
-        value 228;
+        value 227;
       }
       enum "Europe/Riga" {
-        value 229;
+        value 228;
       }
       enum "Africa/Tripoli" {
-        value 230;
+        value 229;
       }
       enum "Africa/Casablanca" {
-        value 231;
+        value 230;
       }
       enum "Europe/Monaco" {
-        value 232;
+        value 231;
       }
       enum "Europe/Chisinau" {
-        value 233;
+        value 232;
       }
       enum "Europe/Podgorica" {
-        value 234;
+        value 233;
       }
       enum "America/Marigot" {
-        value 235;
+        value 234;
       }
       enum "Indian/Antananarivo" {
-        value 236;
+        value 235;
       }
       enum "Pacific/Majuro" {
-        value 237;
+        value 236;
         description
           "most locations";
       }
       enum "Pacific/Kwajalein" {
-        value 238;
+        value 237;
         description
           "Kwajalein";
       }
       enum "Europe/Skopje" {
-        value 239;
+        value 238;
       }
       enum "Africa/Bamako" {
-        value 240;
+        value 239;
       }
       enum "Asia/Rangoon" {
-        value 241;
+        value 240;
       }
       enum "Asia/Ulaanbaatar" {
-        value 242;
+        value 241;
         description
           "most locations";
       }
       enum "Asia/Hovd" {
-        value 243;
+        value 242;
         description
           "Bayan-Olgiy, Govi-Altai, Hovd, Uvs, Zavkhan";
       }
       enum "Asia/Choibalsan" {
-        value 244;
+        value 243;
         description
           "Dornod, Sukhbaatar";
       }
       enum "Asia/Macau" {
-        value 245;
+        value 244;
       }
       enum "Pacific/Saipan" {
-        value 246;
+        value 245;
       }
       enum "America/Martinique" {
-        value 247;
+        value 246;
       }
       enum "Africa/Nouakchott" {
-        value 248;
+        value 247;
       }
       enum "America/Montserrat" {
-        value 249;
+        value 248;
       }
       enum "Europe/Malta" {
-        value 250;
+        value 249;
       }
       enum "Indian/Mauritius" {
-        value 251;
+        value 250;
       }
       enum "Indian/Maldives" {
-        value 252;
+        value 251;
       }
       enum "Africa/Blantyre" {
-        value 253;
+        value 252;
       }
       enum "America/Mexico_City" {
-        value 254;
+        value 253;
         description
           "Central Time - most locations";
       }
       enum "America/Cancun" {
-        value 255;
+        value 254;
         description
           "Central Time - Quintana Roo";
       }
       enum "America/Merida" {
-        value 256;
+        value 255;
         description
           "Central Time - Campeche, Yucatan";
       }
       enum "America/Monterrey" {
-        value 257;
+        value 256;
         description
           "Mexican Central Time - Coahuila, Durango, Nuevo Leon,
            Tamaulipas away from US border";
       }
       enum "America/Matamoros" {
-        value 258;
+        value 257;
         description
           "US Central Time - Coahuila, Durango, Nuevo Leon, Tamaulipas
            near US border";
       }
       enum "America/Mazatlan" {
-        value 259;
+        value 258;
         description
           "Mountain Time - S Baja, Nayarit, Sinaloa";
       }
       enum "America/Chihuahua" {
-        value 260;
+        value 259;
         description
           "Mexican Mountain Time - Chihuahua away from US border";
       }
       enum "America/Ojinaga" {
-        value 261;
+        value 260;
         description
           "US Mountain Time - Chihuahua near US border";
       }
       enum "America/Hermosillo" {
-        value 262;
+        value 261;
         description
           "Mountain Standard Time - Sonora";
       }
       enum "America/Tijuana" {
-        value 263;
+        value 262;
         description
           "US Pacific Time - Baja California near US border";
       }
       enum "America/Santa_Isabel" {
-        value 264;
+        value 263;
         description
           "Mexican Pacific Time - Baja California away from US border";
       }
       enum "America/Bahia_Banderas" {
-        value 265;
+        value 264;
         description
           "Mexican Central Time - Bahia de Banderas";
       }
       enum "Asia/Kuala_Lumpur" {
-        value 266;
+        value 265;
         description
           "peninsular Malaysia";
       }
       enum "Asia/Kuching" {
-        value 267;
+        value 266;
         description
           "Sabah & Sarawak";
       }
       enum "Africa/Maputo" {
-        value 268;
+        value 267;
       }
       enum "Africa/Windhoek" {
-        value 269;
+        value 268;
       }
       enum "Pacific/Noumea" {
-        value 270;
+        value 269;
       }
       enum "Africa/Niamey" {
-        value 271;
+        value 270;
       }
       enum "Pacific/Norfolk" {
-        value 272;
+        value 271;
       }
       enum "Africa/Lagos" {
-        value 273;
+        value 272;
       }
       enum "America/Managua" {
-        value 274;
+        value 273;
       }
       enum "Europe/Amsterdam" {
-        value 275;
+        value 274;
       }
       enum "Europe/Oslo" {
-        value 276;
+        value 275;
       }
       enum "Asia/Kathmandu" {
-        value 277;
+        value 276;
       }
       enum "Pacific/Nauru" {
-        value 278;
+        value 277;
       }
       enum "Pacific/Niue" {
-        value 279;
+        value 278;
       }
       enum "Pacific/Auckland" {
-        value 280;
+        value 279;
         description
           "most locations";
       }
       enum "Pacific/Chatham" {
-        value 281;
+        value 280;
         description
           "Chatham Islands";
       }
       enum "Asia/Muscat" {
-        value 282;
+        value 281;
       }
       enum "America/Panama" {
-        value 283;
+        value 282;
       }
       enum "America/Lima" {
-        value 284;
+        value 283;
       }
       enum "Pacific/Tahiti" {
-        value 285;
+        value 284;
         description
           "Society Islands";
       }
       enum "Pacific/Marquesas" {
-        value 286;
+        value 285;
         description
           "Marquesas Islands";
       }
       enum "Pacific/Gambier" {
-        value 287;
+        value 286;
         description
           "Gambier Islands";
       }
       enum "Pacific/Port_Moresby" {
-        value 288;
+        value 287;
       }
       enum "Asia/Manila" {
-        value 289;
+        value 288;
       }
       enum "Asia/Karachi" {
-        value 290;
+        value 289;
       }
       enum "Europe/Warsaw" {
-        value 291;
+        value 290;
       }
       enum "America/Miquelon" {
-        value 292;
+        value 291;
       }
       enum "Pacific/Pitcairn" {
-        value 293;
+        value 292;
       }
       enum "America/Puerto_Rico" {
-        value 294;
+        value 293;
       }
       enum "Asia/Gaza" {
-        value 295;
+        value 294;
         description
           "Gaza Strip";
       }
       enum "Asia/Hebron" {
-        value 296;
+        value 295;
         description
           "West Bank";
       }
       enum "Europe/Lisbon" {
-        value 297;
+        value 296;
         description
           "mainland";
       }
       enum "Atlantic/Madeira" {
-        value 298;
+        value 297;
         description
           "Madeira Islands";
       }
       enum "Atlantic/Azores" {
-        value 299;
+        value 298;
         description
           "Azores";
       }
       enum "Pacific/Palau" {
-        value 300;
+        value 299;
       }
       enum "America/Asuncion" {
-        value 301;
+        value 300;
       }
       enum "Asia/Qatar" {
-        value 302;
+        value 301;
       }
       enum "Indian/Reunion" {
-        value 303;
+        value 302;
       }
       enum "Europe/Bucharest" {
-        value 304;
+        value 303;
       }
       enum "Europe/Belgrade" {
-        value 305;
+        value 304;
       }
       enum "Europe/Kaliningrad" {
-        value 306;
+        value 305;
         description
           "Moscow-01 - Kaliningrad";
       }
       enum "Europe/Moscow" {
-        value 307;
+        value 306;
         description
           "Moscow+00 - west Russia";
       }
       enum "Europe/Volgograd" {
-        value 308;
+        value 307;
         description
           "Moscow+00 - Caspian Sea";
       }
       enum "Europe/Samara" {
-        value 309;
+        value 308;
         description
           "Moscow+00 - Samara, Udmurtia";
       }
       enum "Asia/Yekaterinburg" {
-        value 310;
+        value 309;
         description
           "Moscow+02 - Urals";
       }
       enum "Asia/Omsk" {
-        value 311;
+        value 310;
         description
           "Moscow+03 - west Siberia";
       }
       enum "Asia/Novosibirsk" {
-        value 312;
+        value 311;
         description
           "Moscow+03 - Novosibirsk";
       }
       enum "Asia/Novokuznetsk" {
-        value 313;
+        value 312;
         description
           "Moscow+03 - Novokuznetsk";
       }
       enum "Asia/Krasnoyarsk" {
-        value 314;
+        value 313;
         description
           "Moscow+04 - Yenisei River";
       }
       enum "Asia/Irkutsk" {
-        value 315;
+        value 314;
         description
           "Moscow+05 - Lake Baikal";
       }
       enum "Asia/Yakutsk" {
-        value 316;
+        value 315;
         description
           "Moscow+06 - Lena River";
+      }
+      enum "Asia/Khandyga" {
+        value 316;
+        description
+          "Moscow+06 - Tomponsky, Ust-Maysky";
       }
       enum "Asia/Vladivostok" {
         value 317;
@@ -1321,280 +1323,280 @@ module iana-timezones {
         description
           "Moscow+07 - Sakhalin Island";
       }
-      enum "Asia/Magadan" {
+      enum "Asia/Ust-Nera" {
         value 319;
+        description
+          "Moscow+07 - Oymyakonsky";
+      }
+      enum "Asia/Magadan" {
+        value 320;
         description
           "Moscow+08 - Magadan";
       }
       enum "Asia/Kamchatka" {
-        value 320;
+        value 321;
         description
           "Moscow+08 - Kamchatka";
       }
       enum "Asia/Anadyr" {
-        value 321;
+        value 322;
         description
           "Moscow+08 - Bering Sea";
       }
       enum "Africa/Kigali" {
-        value 322;
-      }
-      enum "Asia/Riyadh" {
         value 323;
       }
-      enum "Pacific/Guadalcanal" {
+      enum "Asia/Riyadh" {
         value 324;
       }
-      enum "Indian/Mahe" {
+      enum "Pacific/Guadalcanal" {
         value 325;
       }
-      enum "Africa/Khartoum" {
+      enum "Indian/Mahe" {
         value 326;
       }
-      enum "Europe/Stockholm" {
+      enum "Africa/Khartoum" {
         value 327;
       }
-      enum "Asia/Singapore" {
+      enum "Europe/Stockholm" {
         value 328;
       }
-      enum "Atlantic/St_Helena" {
+      enum "Asia/Singapore" {
         value 329;
       }
-      enum "Europe/Ljubljana" {
+      enum "Atlantic/St_Helena" {
         value 330;
       }
-      enum "Arctic/Longyearbyen" {
+      enum "Europe/Ljubljana" {
         value 331;
       }
-      enum "Europe/Bratislava" {
+      enum "Arctic/Longyearbyen" {
         value 332;
       }
-      enum "Africa/Freetown" {
+      enum "Europe/Bratislava" {
         value 333;
       }
-      enum "Europe/San_Marino" {
+      enum "Africa/Freetown" {
         value 334;
       }
-      enum "Africa/Dakar" {
+      enum "Europe/San_Marino" {
         value 335;
       }
-      enum "Africa/Mogadishu" {
+      enum "Africa/Dakar" {
         value 336;
       }
-      enum "America/Paramaribo" {
+      enum "Africa/Mogadishu" {
         value 337;
       }
-      enum "Africa/Juba" {
+      enum "America/Paramaribo" {
         value 338;
       }
-      enum "Africa/Sao_Tome" {
+      enum "Africa/Juba" {
         value 339;
       }
-      enum "America/El_Salvador" {
+      enum "Africa/Sao_Tome" {
         value 340;
       }
-      enum "America/Lower_Princes" {
+      enum "America/El_Salvador" {
         value 341;
       }
-      enum "Asia/Damascus" {
+      enum "America/Lower_Princes" {
         value 342;
       }
-      enum "Africa/Mbabane" {
+      enum "Asia/Damascus" {
         value 343;
       }
-      enum "America/Grand_Turk" {
+      enum "Africa/Mbabane" {
         value 344;
       }
-      enum "Africa/Ndjamena" {
+      enum "America/Grand_Turk" {
         value 345;
       }
-      enum "Indian/Kerguelen" {
+      enum "Africa/Ndjamena" {
         value 346;
       }
-      enum "Africa/Lome" {
+      enum "Indian/Kerguelen" {
         value 347;
       }
-      enum "Asia/Bangkok" {
+      enum "Africa/Lome" {
         value 348;
       }
-      enum "Asia/Dushanbe" {
+      enum "Asia/Bangkok" {
         value 349;
       }
-      enum "Pacific/Fakaofo" {
+      enum "Asia/Dushanbe" {
         value 350;
       }
-      enum "Asia/Dili" {
+      enum "Pacific/Fakaofo" {
         value 351;
       }
-      enum "Asia/Ashgabat" {
+      enum "Asia/Dili" {
         value 352;
       }
-      enum "Africa/Tunis" {
+      enum "Asia/Ashgabat" {
         value 353;
       }
-      enum "Pacific/Tongatapu" {
+      enum "Africa/Tunis" {
         value 354;
       }
-      enum "Europe/Istanbul" {
+      enum "Pacific/Tongatapu" {
         value 355;
       }
-      enum "America/Port_of_Spain" {
+      enum "Europe/Istanbul" {
         value 356;
       }
-      enum "Pacific/Funafuti" {
+      enum "America/Port_of_Spain" {
         value 357;
       }
-      enum "Asia/Taipei" {
+      enum "Pacific/Funafuti" {
         value 358;
       }
-      enum "Africa/Dar_es_Salaam" {
+      enum "Asia/Taipei" {
         value 359;
       }
-      enum "Europe/Kiev" {
+      enum "Africa/Dar_es_Salaam" {
         value 360;
+      }
+      enum "Europe/Kiev" {
+        value 361;
         description
           "most locations";
       }
       enum "Europe/Uzhgorod" {
-        value 361;
+        value 362;
         description
           "Ruthenia";
       }
       enum "Europe/Zaporozhye" {
-        value 362;
+        value 363;
         description
           "Zaporozh'ye, E Lugansk / Zaporizhia, E Luhansk";
       }
       enum "Europe/Simferopol" {
-        value 363;
+        value 364;
         description
           "central Crimea";
       }
       enum "Africa/Kampala" {
-        value 364;
+        value 365;
       }
       enum "Pacific/Johnston" {
-        value 365;
+        value 366;
         description
           "Johnston Atoll";
       }
       enum "Pacific/Midway" {
-        value 366;
+        value 367;
         description
           "Midway Islands";
       }
       enum "Pacific/Wake" {
-        value 367;
+        value 368;
         description
           "Wake Island";
       }
       enum "America/New_York" {
-        value 368;
+        value 369;
         description
           "Eastern Time";
       }
       enum "America/Detroit" {
-        value 369;
+        value 370;
         description
           "Eastern Time - Michigan - most locations";
       }
       enum "America/Kentucky/Louisville" {
-        value 370;
+        value 371;
         description
           "Eastern Time - Kentucky - Louisville area";
       }
       enum "America/Kentucky/Monticello" {
-        value 371;
+        value 372;
         description
           "Eastern Time - Kentucky - Wayne County";
       }
       enum "America/Indiana/Indianapolis" {
-        value 372;
+        value 373;
         description
           "Eastern Time - Indiana - most locations";
       }
       enum "America/Indiana/Vincennes" {
-        value 373;
+        value 374;
         description
           "Eastern Time - Indiana - Daviess, Dubois, Knox & Martin
            Counties";
       }
       enum "America/Indiana/Winamac" {
-        value 374;
+        value 375;
         description
           "Eastern Time - Indiana - Pulaski County";
       }
       enum "America/Indiana/Marengo" {
-        value 375;
+        value 376;
         description
           "Eastern Time - Indiana - Crawford County";
       }
       enum "America/Indiana/Petersburg" {
-        value 376;
+        value 377;
         description
           "Eastern Time - Indiana - Pike County";
       }
       enum "America/Indiana/Vevay" {
-        value 377;
+        value 378;
         description
           "Eastern Time - Indiana - Switzerland County";
       }
       enum "America/Chicago" {
-        value 378;
+        value 379;
         description
           "Central Time";
       }
       enum "America/Indiana/Tell_City" {
-        value 379;
+        value 380;
         description
           "Central Time - Indiana - Perry County";
       }
       enum "America/Indiana/Knox" {
-        value 380;
+        value 381;
         description
           "Central Time - Indiana - Starke County";
       }
       enum "America/Menominee" {
-        value 381;
+        value 382;
         description
-          "Central Time - Michigan - Dickinson, Gogebic, Iron &
-           Menominee Counties";
+          "Central Time - Michigan - Dickinson, Gogebic, Iron & Menominee
+           Counties";
       }
       enum "America/North_Dakota/Center" {
-        value 382;
+        value 383;
         description
           "Central Time - North Dakota - Oliver County";
       }
       enum "America/North_Dakota/New_Salem" {
-        value 383;
+        value 384;
         description
           "Central Time - North Dakota - Morton County (except Mandan
            area)";
       }
       enum "America/North_Dakota/Beulah" {
-        value 384;
+        value 385;
         description
           "Central Time - North Dakota - Mercer County";
       }
       enum "America/Denver" {
-        value 385;
+        value 386;
         description
           "Mountain Time";
       }
       enum "America/Boise" {
-        value 386;
-        description
-          "Mountain Time - south Idaho & east Oregon";
-      }
-      enum "America/Shiprock" {
         value 387;
         description
-          "Mountain Time - Navajo";
+          "Mountain Time - south Idaho & east Oregon";
       }
       enum "America/Phoenix" {
         value 388;
         description
-          "Mountain Standard Time - Arizona";
+          "Mountain Standard Time - Arizona (except Navajo)";
       }
       enum "America/Los_Angeles" {
         value 389;

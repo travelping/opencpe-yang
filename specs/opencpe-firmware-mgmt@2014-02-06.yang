@@ -8,7 +8,7 @@ module opencpe-firmware-mgmt {
 
     import ietf-system {
         prefix "sys";
-        revision-date 2013-11-07;
+        revision-date 2014-04-04;
     }
 
     import ietf-inet-types {
